@@ -1,0 +1,85 @@
+.hero-card {
+  /* border: 2px solid red; */
+  position: relative;
+  /* animation: float 3.5s linear infinite; */
+}
+
+.hero-card-top-section {
+  display: flex;
+  align-items: center;
+  /* border: 2px solid orange; */
+}
+.hero-h1-div {
+  position: relative;
+  font-family: var(--fancyFont);
+  /* transform: scale(0); */
+  /* border: 5px solid red; */
+}
+
+.hero-card-caption-div {
+  text-align: center;
+}
+
+.h1-div-one {
+  transform: translateX(6rem);
+}
+
+.h1-div-two {
+  transform: translateX(0rem) translateY(6.5rem);
+}
+
+.hero-h1 {
+  font-size: 40rem;
+  transform: scaleY(0);
+  filter: blur(20px);
+  animation: inflate 1s var(--i) cubic-bezier(0.25, 0.52, 0.165, 1.3) forwards,
+    clearblur 1s var(--i) forwards;
+}
+
+.hero-h3-div {
+  transform: translateX(-6.5rem) translateY(4rem);
+}
+
+.hero-h3 {
+  transform: scaleX(0);
+  animation: scale-horizontal 1s 2.75s cubic-bezier(0.25, 0.52, 0.165, 1.5)
+    forwards;
+  color: mediumspringgreen;
+}
+
+.hero-card-caption-div {
+  overflow: hidden;
+}
+
+.caption-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  animation: riseup 1.5s 2.5s ease-out forwards;
+  transform: translateY(5rem);
+}
+
+.caption-h5 {
+  letter-spacing: 0.5rem;
+  text-transform: uppercase;
+  font-weight: 200;
+}
+
+@media screen and (max-width: 750px) {
+  .hero-h1 {
+    font-size: 26rem;
+    line-height: 24rem;
+  }
+
+  .h1-div-one {
+    transform: translateX(4rem) translateY(0rem);
+  }
+
+  .h1-div-two {
+    transform: translateX(0.5rem) translateY(2rem);
+  }
+
+  .hero-h3-div {
+    transform: translateX(-3rem) translateY(0rem);
+  }
+}

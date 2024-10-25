@@ -1,0 +1,70 @@
+.spotlight-parent {
+  position: absolute;
+  top: 2rem;
+  width: 300px;
+  height: 650px;
+  /* border: 2px solid red; */
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  flex-direction: column;
+  gap: 20rem;
+}
+
+.spotlight-div {
+  height: 25px;
+  width: 25px;
+  /* border: 2px solid red; */
+  position: relative;
+  transform: scaleY(0);
+  animation: inflate 1s 0.5s forwards;
+}
+
+.eclipse,
+.spotlight {
+  border-radius: 50%;
+  background: black;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+}
+
+.eclipse {
+  background: black;
+  z-index: 5;
+}
+
+.spotlight {
+  background: white;
+  filter: blur(3px);
+}
+
+.beams {
+  flex-grow: 1;
+  /* border: 1px solid red; */
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  opacity: 0;
+  animation: fadein 1s 1s forwards;
+}
+
+.beam {
+  height: 100%;
+  width: 55px;
+  background: linear-gradient(white, transparent);
+  transform-origin: top;
+  /* position: absolute; */
+  filter: blur(100px);
+  /* opacity: 35%;  */
+}
+
+.left-beam {
+  transform: rotate(10deg);
+}
+
+.right-beam {
+  transform: rotate(-10deg);
+}

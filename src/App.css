@@ -1,0 +1,59 @@
+.app {
+  max-width: 144rem;
+  margin: 0 auto;
+  border: 2px solid black;
+  /* min-height: 100vh; */
+  font-family: var(--mainFont);
+  overflow: hidden;
+  background: rgb(15, 20, 15);
+}
+
+@keyframes inflate {
+  100% {
+    transform: scaleY(1);
+  }
+}
+
+@keyframes scale-horizontal {
+  100% {
+    transform: scaleX(1);
+  }
+}
+
+@keyframes fadein {
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes clearblur {
+  100% {
+    filter: blur(0);
+  }
+}
+
+@keyframes riseup {
+  100% {
+    transform: translateY(0);
+  }
+}
+
+@keyframes float {
+  0% {
+    transform: translateY(0rem);
+  }
+  /* 25%{
+    transform:translateY(-3rem)
+
+  } */
+  50% {
+    transform: translateY(10rem);
+  }
+  /* 75%{
+    transform:translateY(-3rem)
+
+  } */
+  100% {
+    transform: translateY(0rem);
+  }
+}
