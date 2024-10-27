@@ -1,54 +1,23 @@
-import React, {useState,useEffect} from 'react'
+import React, {useState,useEffect,useRef} from 'react'
 import Particles from "../Particles/Particles"
 import {SampleItem} from "./components"
-import { sampleData } from '../../const'
+import { sampleData,keyboardBtns } from '../../const'
 import {FaPlay, FaPause , FaFastForward, FaFastBackward} from "react-icons/fa"
+import gsap from "gsap"
 import "./Samples.css"
 
 const Samples = () => {
   const [counter,setCounter] = useState(0)
   const [samples,setSamples] = useState(sampleData)
   const [focused,setFocused] = useState(sampleData[counter]);
-  const [runCarousel,setRunCarousel] = useState(true)
+  const [runCarousel,setRunCarousel] = useState(true);
+  const contextRef = useRef(null);
+  const titleRef = useRef();
+  const descriptionRef = useRef();
+  const screenRef = useRef();
   let carouselInterval;
-  const keyboardBtns = [
-    // {id:1,key:"tab",size:"medium"},
-    {id:2,key:"q",size:"small"},
-    {id:3,key:"w",size:"small"},
-    {id:4,key:"e",size:"small"},
-    {id:5,key:"r",size:"small"},
-    {id:6,key:"t",size:"small"},
-    {id:7,key:"q",size:"small"},
-    {id:8,key:"y",size:"small"},
-    {id:9,key:"u",size:"small"},
-    {id:10,key:"i",size:"small"},
-    {id:11,key:"o",size:"small"},
-    {id:12,key:"p",size:"small"},
-    {id:13,key:"{",size:"small"},
-    {id:14,key:"}",size:"small"},
-    // {id:15,key:"caps lock",size:"medium"},
-    {id:16,key:"a",size:"small"},
-    {id:17,key:"s",size:"small"},
-    {id:18,key:"d",size:"small"},
-    {id:19,key:"f",size:"small"},
-    {id:20,key:"g",size:"small"},
-    {id:21,key:"h",size:"small"},
-    {id:22,key:"j",size:"small"},
-    {id:23,key:"k",size:"small"},
-    {id:24,key:"l",size:"small"},
-    {id:25,key:"return",size:"medium"},
-    {id:26,key:"shift",size:"medium"},
-    {id:27,key:"z",size:"small"},
-    {id:28,key:"x",size:"small"},
-    {id:29,key:"c",size:"small"},
-    {id:30,key:"v",size:"small"},
-    {id:31,key:"b",size:"small"},
-    {id:32,key:"n",size:"small"},
-    {id:33,key:"m",size:"small"},
-    {id:34,key:"shift",size:"medium"},
-    {id:35,key:"space",size:"large"},
-  
-  ]
+
+
 
 
   useEffect(()=>{
@@ -58,6 +27,8 @@ const Samples = () => {
 
         setSamples(samples =>samples.map(sample=>sample.offset == samples.length-1 ? {...sample,offset:0} : {...sample,offset:sample.offset +1}));
         setCounter((counter)=>counter = counter  == 0 ? samples.length-1  : counter - 1);
+
+
       },5000);
     }
     else{
@@ -72,9 +43,19 @@ const Samples = () => {
   useEffect(()=>{
       console.log("Counter",counter);
       setFocused(samples[counter]);
+      gsap.from(titleRef.current,{scaleY:0,y:20})
+      gsap.to(titleRef.current,{scaleY:1,y:0,duration:2,ease:"elastic.out"})
+      gsap.from(descriptionRef.current,{scaleX:0})
+      gsap.to(descriptionRef.current,{scaleX:1,duration:2.5,ease:"elastic.out"})
+      gsap.from(screenRef.current,{scaleX:0})
+      gsap.to(screenRef.current,{scaleX:1,duration:3,ease:"elastic.out"})
+
+    
+  
   },[counter])
 
   const handleCarousel=(dir)=>{
+  
     let tempCounter = counter;
       if(dir == "prev"){
     
@@ -94,12 +75,14 @@ const Samples = () => {
   return (
     <div className="samples-container view-container">
       <Particles/>
-        <div className="samples-info-card">
-          <h3 className="sample-title-h3">{focused.title}</h3>
-          <h5 className="sample-description-h5">{focused.description}</h5>
+        <div className="samples-info-laptop-card">
+          <div className="samples-info-card">
+          <h3 ref={titleRef} className="sample-title-h3">{focused.title}</h3>
+          <h5 ref={descriptionRef} className="sample-description-h5">{focused.description}</h5>
+          </div>
           <div className="laptop">
           <div className="monitor">
-            <div className="monitor-screen">
+            <div ref={screenRef} className="monitor-screen">
               <iframe className="iframe-screen" src={focused.link} frameBorder="0"></iframe>
             </div>
           </div>

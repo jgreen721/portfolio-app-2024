@@ -27,6 +27,23 @@
   width: 100%;
 }
 
+@media screen and (max-width: 1075px) {
+  .sample-item {
+    height: 275px;
+    width: 300px;
+    transform: rotateY(calc(var(--rotate) * -10))
+      translateZ(calc(var(--offset) * -60px))
+      translateX(calc(var(--offset) * 20px));
+  }
+
+  /* .samples-carousel-container {
+    position: relative;
+    transform: translateX(0);
+    bottom: 5rem;
+    height: 350px;
+  } */
+}
+
 @media screen and (max-width: 575px) {
   .sample-item {
     height: 225px;
