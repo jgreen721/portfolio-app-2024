@@ -1,14 +1,114 @@
+.links-btns-div {
+  position: relative;
+  /* overflow: hidden; */
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 4rem;
+  padding: 3rem 0;
+  height: 100%;
+  overflow: hidden;
+}
+
+.link-btn-shell {
+  /* border: 2px solid red; */
+  padding: 0.5rem;
+  position: relative;
+}
+
+@property --percent {
+  syntax: "<angle>";
+  initial-value: 0deg;
+  inherits: false;
+}
+
+.link-btn-shell-1::after {
+  --percent: 0deg;
+  position: absolute;
+  content: "";
+  inset: 0;
+  transition: 0.5s;
+  background: conic-gradient(
+    from var(--percent),
+    transparent 50%,
+    var(--color)
+  );
+  filter: blur(1px);
+  border-radius: 1rem;
+  animation: animatevalue 2s linear infinite;
+}
+
+.link-btn-shell-1:hover::after {
+  transform: scale(1.05);
+  /* animation: animatevalue 2s linear infinite; */
+}
+
+@property --percent2 {
+  syntax: "<angle>";
+  initial-value: 180deg;
+  inherits: false;
+}
+
+.link-btn-shell-2::after {
+  --percent2: 180deg;
+  position: absolute;
+  content: "";
+  inset: 0;
+  transition: 0.5s;
+  background: conic-gradient(
+    from var(--percent2),
+    transparent 35%,
+    var(--color)
+  );
+  filter: blur(1px);
+  border-radius: 1rem;
+  animation: animatevalue2 2s linear infinite;
+}
+
+.link-btn-shell-2:hover::after {
+  transform: scale(1.05);
+  /* animation: animatevalue2 2s linear infinite; */
+}
+
+@keyframes animatevalue {
+  0% {
+    --percent: 0deg;
+  }
+  100% {
+    --percent: 360deg;
+  }
+}
+
+@keyframes animatevalue2 {
+  0% {
+    --percent2: 180deg;
+  }
+  100% {
+    --percent2: -180deg;
+  }
+}
 .focused-link {
   font-size: 2rem;
   text-decoration: none;
   display: block;
   color: white;
-  border: 2px solid white;
-  margin: 1rem;
-  width: 150px;
+  /* border: 2px solid white; */
+  /* margin: 1rem; */
+  width: 250px;
   display: flex;
   align-items: center;
   justify-content: center;
   border-radius: 0.5rem;
   height: 50px;
+  z-index: 5;
+  background: linear-gradient(to right, rgb(15, 15, 15), rgb(25, 25, 25));
+  position: relative;
+  transition: 0.5s ease;
+}
+
+.focused-link:hover {
+  /* box-shadow: 0px 0px 20px rgba(255, 255, 255, 0.3); */
+  transform: scale(1.05);
 }

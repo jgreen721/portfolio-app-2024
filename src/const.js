@@ -14,6 +14,8 @@ export const sampleData = [
     offset: 0,
     link: "https://nextjs-deserts-cart.vercel.app/",
     code: "https://github.com/jgreen721/nextjs_deserts_cart",
+    color1: "white",
+    color2: "rgb(175,25,20)",
   },
   {
     id: 2,
@@ -24,6 +26,8 @@ export const sampleData = [
     offset: 1,
     link: "https://jgreen721.github.io/frontend_challenges/dictionaryapp/index.html",
     code: "https://github.com/jgreen721/frontend_challenges/tree/master/dictionaryapp",
+    color1: "purple",
+    color2: "white",
   },
   {
     id: 3,
@@ -34,6 +38,8 @@ export const sampleData = [
     offset: 2,
     link: "https://nextjs-hangman-alpha.vercel.app/",
     code: "https://github.com/jgreen721/nextjs_hangman",
+    color1: "purple",
+    color2: "blue",
   },
   {
     id: 4,
@@ -44,6 +50,8 @@ export const sampleData = [
     offset: 3,
     link: "https://fe-quiz.vercel.app/",
     code: "https://github.com/jgreen721/fe_quiz",
+    color1: "white",
+    color2: "rgb(175,25,20)",
   },
   {
     id: 5,
@@ -54,6 +62,8 @@ export const sampleData = [
     offset: 4,
     link: "https://redbull-ad.vercel.app/",
     code: "https://github.com/jgreen721/redbull_ad",
+    color1: "hotpink",
+    color2: "limegreen",
   },
 ];
 

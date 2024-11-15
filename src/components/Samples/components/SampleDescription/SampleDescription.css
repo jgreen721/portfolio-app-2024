@@ -3,8 +3,14 @@
   padding: 3rem;
 }
 
+.sample-title-h3 {
+  text-transform: uppercase;
+  letter-spacing: 0.2rem;
+  font-weight: 200;
+}
+
 .sample-description-h5 {
-  font-weight: 300;
+  font-weight: 400;
   margin: 2rem 0;
   min-height: 125px;
   /* border: 3px solid red; */

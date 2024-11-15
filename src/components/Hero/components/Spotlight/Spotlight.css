@@ -48,6 +48,7 @@
   justify-content: center;
   position: relative;
   opacity: 0;
+  transform-origin: top;
   animation: fadein 1s 1s forwards;
 }
 
