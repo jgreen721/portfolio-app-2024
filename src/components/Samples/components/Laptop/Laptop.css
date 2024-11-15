@@ -1,0 +1,147 @@
+
+.laptop{
+    position:relative;
+    /* border:5px solid green; */
+    /* animation:inflate .5s 2s cubic-bezier(0.275, 0.92, 0.465, 1.8) forwards; */
+  }
+  
+  .monitor {
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    height: 400px;
+    width: 600px;
+    /* border:4px solid green; */
+    /* overflow:hidden; */
+  }
+  
+   .monitor::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: gray;
+    border-radius: 0.5rem;
+    box-shadow: 1px 1px 1px black, 1px 1px 10px black, 1px 1px 15px black inset;
+  } 
+  
+  .monitor-screen {
+    /* background: rgb(225, 225, 225); */
+    position: relative;
+     height: 375px;
+    width: 575px; 
+    overflow: auto;
+    border-radius: 2.5rem;
+    z-index: 10;
+    overflow:hidden;
+  }
+  
+  .iframe-screen {
+    height:100%;
+    width:100%;
+  }
+  
+  .keyboard {
+    width: 600px;
+    height: 200px;
+    /* border: 2px solid black; */
+    margin: 0 auto;
+    background: gray;
+    box-shadow: 3px 3px 5px gray;
+    border-radius: 0.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    box-shadow: 1px 1px 1px black, 1px 1px 10px black,1px 10px 15px black inset,1px 10px 15px black inset;
+      5px 5px 15px 20px rgba(15, 15, 15, 0.5);
+  
+    opacity: 75%;
+    transform: skew(220deg) rotateX(45deg) translateX(8.5rem) translateY(-4.5rem);
+  }
+  
+  .keyboard-btns {
+    padding: 2rem;
+    position: absolute;
+    inset: 0;
+    gap: 0.5rem;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    /* border: 2px solid red; */
+    
+  }
+  
+  .keyboard-btn {
+    border: 1px solid black;
+    height: fit-content;
+    padding: 0.5rem;
+    text-align: center;
+    border-radius: 0.5rem;
+    font-size: 1.2rem;
+    font-weight: 500;
+    box-shadow: 1px 1px 10px black;
+  }
+  
+  .small {
+    width: 45px;
+  }
+  
+  .medium {
+    width: 125px;
+  }
+  
+  .large {
+    width: 100%;
+  }
+
+
+
+@media screen and (max-width: 1075px) {
+.iframe-screen {
+    /* border:1px solid red; */
+    left: 0;
+  }
+
+
+}
+
+@media screen and (max-width: 650px) {
+
+  .laptop {
+    transform: scale(0.85) translateX(-7.5rem);
+  }
+
+  .monitor {
+    height: 250px;
+    width: 365px;
+  }
+
+  .monitor-screen {
+    height: 225px;
+    width: 340px;
+  }
+
+  .iframe-screen {
+    height: 225px;
+    width: 340px;
+  }
+
+  .keyboard {
+    width: 365px;
+  }
+
+  .small {
+    width: 30px;
+  }
+
+  .medium {
+    width: 75px;
+  }
+
+  .large {
+    width: 250px;
+  }
+}

@@ -1,0 +1,21 @@
+.footer {
+  padding: 5rem;
+}
+
+.footer-links {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+}
+
+.footer-link-item {
+  cursor: pointer;
+}
+
+.footer-link-item:hover {
+}
+.footer-link-item a {
+  color: white;
+  font-size: 3.5rem;
+}

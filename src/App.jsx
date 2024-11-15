@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import {Hero,Navbar,Samples} from "./components"
+import {Hero,Navbar,Samples,Footer} from "./components"
 import './App.css'
 
 function App() {
@@ -8,6 +8,7 @@ function App() {
     <div className="app">
       <Hero/>
       <Samples/>
+      <Footer/>
     </div>
   )
 }

@@ -13,6 +13,7 @@ export const sampleData = [
     img: desertCheckout,
     offset: 0,
     link: "https://nextjs-deserts-cart.vercel.app/",
+    code: "https://github.com/jgreen721/nextjs_deserts_cart",
   },
   {
     id: 2,
@@ -22,15 +23,17 @@ export const sampleData = [
     img: dictionaryApi,
     offset: 1,
     link: "https://jgreen721.github.io/frontend_challenges/dictionaryapp/index.html",
+    code: "https://github.com/jgreen721/frontend_challenges/tree/master/dictionaryapp",
   },
   {
     id: 3,
     title: "Hangman Game",
     description:
-      "Using the latest version of NextJS, enjoy this take on the classic Hangman game. Featuring pleasing color design and animations. Styled with Tailwind",
+      "Using the latest version of NextJS, enjoy this take on the classic Hangman game. Featuring pleasing color design and animations. Styled with Tailwind.",
     img: hangmanGame,
     offset: 2,
     link: "https://nextjs-hangman-alpha.vercel.app/",
+    code: "https://github.com/jgreen721/nextjs_hangman",
   },
   {
     id: 4,
@@ -40,6 +43,7 @@ export const sampleData = [
     img: quizGame,
     offset: 3,
     link: "https://fe-quiz.vercel.app/",
+    code: "https://github.com/jgreen721/fe_quiz",
   },
   {
     id: 5,
@@ -49,6 +53,7 @@ export const sampleData = [
     img: redbullAd,
     offset: 4,
     link: "https://redbull-ad.vercel.app/",
+    code: "https://github.com/jgreen721/redbull_ad",
   },
 ];
 
